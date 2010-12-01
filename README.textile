@@ -1,0 +1,34 @@
+h1. LÖVE-class
+
+A Lua library that wraps LÖVE objects into classes.
+
+h1. Documentation
+
+There is no documentation at the moment.
+
+h1. Features
+  * 2D Vector class with vector math built-in.
+	* Circle class with collision detection.
+	* Color class for easy re-use of colours.
+	* SoundEffect class with built-in source management.
+	* Wraps most LÖVE objects:
+	** Image
+	** ParticleSystem
+	** Framebuffer
+	** Font
+	** ImageFont
+	** Quad
+	** Music
+	* String library extensions.
+
+h1. Using LÖVE-class in your LÖVE game
+
+If your game folder is a git repository, using an up-to-date LÖVE-class is easy.
+Just be in the root folder of your game's source code, and issue the following command:
+    git submodule add http://github.com/TheLinx/LOVE-class.git [optional: where to put LÖVE-class]
+
+If you just want to download the source code, use this command:
+    git clone http://github.com/TheLinx/LOVE-class.git
+
+Then, just require @loveclass.init@.
+Make sure to call @loveclass.update@ in your @love.update@!

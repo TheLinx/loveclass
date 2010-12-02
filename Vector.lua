@@ -1,7 +1,12 @@
 Vector = class "Vector"
 function Vector:initialize(x, y)
-	self.x = x
-	self.y = y
+	if tonumber(x) then
+		self.x = x
+		self.y = y
+	else
+		self.x = x[1] or x.x
+		self.y = x[2] or x.y
+	end
 end
 
 function Vector:round()

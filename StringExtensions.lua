@@ -31,7 +31,7 @@ function string_mt.__div(a, b)
 end
 function string_mt.__index(str, id)
 	if type(id) ~= "number" then
-		return rawget(str, id)
+		return string[id]
 	end
 	return str:sub(id, id)
 end

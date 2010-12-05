@@ -60,3 +60,8 @@ function Vector:__mul(by)
 		return self.x * by.x + self.y * by.y
 	end
 end
+function Vector:__eq(other)
+	if type(other) ~= "table" then return false end
+	if not other.x or not other.y then return false end
+	return (self.x == other.x) and (self.y == other.y)
+end

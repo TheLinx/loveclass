@@ -1,5 +1,5 @@
 assert(Object and class, "You need to require MiddleClass before including the LOVE classes")
-assert(Stateful, "You need to require Stateful before including the LOVE classes")
+assert(Indexable, "You need to require MiddleClass-Extras before including the LOVE classes")
 
 local includes = {
 	"Vector", "Circle", "Color", -- pseudo-classes

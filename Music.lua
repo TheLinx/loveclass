@@ -1,4 +1,4 @@
-Music = class "Music"
+Music = class("Music"):include(Indexable)
 
 local loveNewSource = love.audio.newSource
 local nowplaying
@@ -22,7 +22,7 @@ function Music.stop()
 	nowplaying = nil
 end
 
-function SuperFont:index(name)
+function Music:index(name)
   if not self.object then return nil end
   local func = self.object[name]
   if func then

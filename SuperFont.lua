@@ -1,4 +1,4 @@
-SuperFont = class "SuperFont"
+SuperFont = class("SuperFont"):include(Indexable)
 -- You shouldn't use this class.
 
 local loveSetFont = love.graphics.setFont

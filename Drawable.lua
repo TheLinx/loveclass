@@ -1,4 +1,4 @@
-Drawable = class "Drawable"
+Drawable = class("Drawable"):include(Indexable)
 -- Superclass for all things that can be drawn on screen. This is an abstract type that can't be created directly.
 
 local loveDraw = love.graphics.draw

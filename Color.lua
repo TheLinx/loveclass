@@ -13,3 +13,6 @@ end
 function Color:setBackground()
 	love.graphics.setBackgroundColor(self.r, self.g, self.b)
 end
+function Color:__tostring()
+	return ("Color(%s, %s, %s%s)"):format(self.r, self.g, self.b, self.a and " "..self.a)
+end

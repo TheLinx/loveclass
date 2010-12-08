@@ -11,6 +11,7 @@ local includes = {
 }
 
 local updatefuncs = {}
+local olde = addUpdateFunc -- in case this exists
 function addUpdateFunc(func)
 	table.insert(updatefuncs, func)
 end
@@ -20,8 +21,7 @@ for _,n in pairs(includes) do
 	require(s..n)
 end
 
-addUpdateFunc = nil
-loveclassindex = nil
+addUpdateFunc = olde -- restore it. if it didn't exist in the first place, it'll go nil.
 
 loveclass = {}
 function loveclass.update(dt)

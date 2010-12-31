@@ -65,3 +65,6 @@ function Vector:__eq(other)
 	if not other.x or not other.y then return false end
 	return (self.x == other.x) and (self.y == other.y)
 end
+function Vector:__unm()
+	return Vector(-self.x, -self.y)
+end

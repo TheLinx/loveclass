@@ -48,7 +48,11 @@ function Vector:__tostring()
 	return "(" .. tostring(self.x) .. ", " .. tostring(self.y) .. ")"
 end
 function Vector:__add(other)
-	return Vector(self.x + other.x, self.y + other.y)
+	if type(other) == "number" or type(other) == "string" then -- assume other as x and y
+		return Vector(self.x + other, self.y + other)
+	else -- adding two Vectors
+		return Vector(self.x + other.x, self.y + other.y)
+	end
 end
 function Vector:__sub(other)
 	return Vector(self.x - other.x, self.y - other.y)

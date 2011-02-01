@@ -4,5 +4,5 @@ Font = SuperFont:subclass "Font"
 local loveNewFont = love.graphics.newFont
 
 function Font:initialize(...)
-	super.initialize(self, loveNewFont(...))
+	SuperFont.initialize(self, loveNewFont(...))
 end

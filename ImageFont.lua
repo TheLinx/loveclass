@@ -4,5 +4,5 @@ ImageFont = SuperFont:subclass "ImageFont"
 local loveNewImageFont = love.graphics.newImageFont
 
 function ImageFont:initialize(...)
-	super.initialize(self, loveNewImageFont(...))
+	SuperFont.initialize(self, loveNewImageFont(...))
 end

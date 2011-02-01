@@ -5,7 +5,7 @@ local loveNewImage = love.graphics.newImage
 local loveDrawq = love.graphics.drawq
 
 function Image:initialize(...)
-	super.initialize(self, loveNewImage(...))
+	Drawable.initialize(self, loveNewImage(...))
 end
 
 function Image:drawq(quad, ...)

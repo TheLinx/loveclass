@@ -4,5 +4,5 @@ ParticleSystem = Drawable:subclass "ParticleSystem"
 local loveNewParticleSystem = love.graphics.newParticleSystem
 
 function ParticleSystem:initialize(...)
-	super.initialize(self, loveNewParticleSystem(...))
+	Drawable.initialize(self, loveNewParticleSystem(...))
 end

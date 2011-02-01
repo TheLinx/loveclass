@@ -4,5 +4,5 @@ Framebuffer = Drawable:subclass "Framebuffer"
 local loveNewFramebuffer = love.graphics.newFramebuffer
 
 function Framebuffer:initialize(...)
-	super.initialize(self, loveNewFramebuffer(...))
+	Drawable.initialize(self, loveNewFramebuffer(...))
 end

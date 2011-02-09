@@ -8,6 +8,7 @@ function SoundEffect:initialize(...)
 	self.looping = false
 	self.pitch = 1
 	self.volume = 1
+	self.playing = 0
 end
 
 function SoundEffect:play()
@@ -16,7 +17,8 @@ function SoundEffect:play()
 	src:setPitch(self.pitch)
 	src:setVolume(self.volume)
 	love.audio.play(src)
-	table.insert(queue, src)
+	self.playing = self.playing + 1
+	table.insert(queue, {src, function() self.playing = self.playing - 1 end})
 end
 
 function SoundEffect:setLooping(looping)
@@ -32,11 +34,12 @@ end
 addUpdateFunc(function ()
 	local removelist = {}
 	for i,v in ipairs(queue) do
-		if v:isStopped() then
+		if v[1]:isStopped() then
 			table.insert(removelist, i)
 		end
 	end
 	table.foreach(removelist, function(_, key)
 		table.remove(queue, key)
+		v[2]()
 	end)
 end)

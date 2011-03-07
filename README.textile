@@ -4,14 +4,13 @@ A Lua library that wraps LÖVE objects into classes.
 
 h1. Dependencies
 
-LÖVE-class depends on "MiddleClass":http://github.com/kikito/middleclass/ and the "MiddleClass extra":http://github.com/kikito/middleclass-extras/ "Indexable".
+LÖVE-class depends on "vrld's HUMP":http://github.com/vrld/hump library.
 
 h1. Documentation
 
 There is no documentation at the moment.
 
 h1. Features
-  * 2D Vector class with vector math built-in.
   * Circle class with collision detection.
   * Color class for easy re-use of colours.
   * SoundEffect class with built-in source management.

@@ -1,14 +1,14 @@
-SuperFont = class("SuperFont"):include(Indexable)
--- You shouldn't use this class.
+Class = require 'hump.class'
 
 local loveSetFont = love.graphics.setFont
 local loveGetFont = love.graphics.getFont
 local lovePrint = love.graphics.print
 local lovePrintf = love.graphics.printf
 
-function SuperFont:initialize(object)
+-- You shouldn't use this class.
+local SuperFont = Class(function(object)
 	self.object = object
-end
+end)
 
 function SuperFont:set()
 	loveSetFont(self.object)
@@ -27,7 +27,7 @@ function SuperFont:printf(...)
 	self:_print(lovePrintf, ...)
 end
 
-function SuperFont:index(name)
+function SuperFont:__index(name)
 	if not self.object then return nil end
 	local func = self.object[name]
 	if func then
@@ -36,3 +36,5 @@ function SuperFont:index(name)
 		end
 	end
 end
+
+return SuperFont

@@ -1,11 +1,13 @@
-Color = class "Color"
+Class = require 'hump.class'
 
-function Color:initialize(r, g, b, a)
+-- A colour.
+local Color = Class(function(r, g, b, a)
 	self.r = r
 	self.g = g
 	self.b = b
 	self.a = a
-end
+end)
+
 function Color:set()
 	local a = self.a or select(4, love.graphics.getColor())
 	love.graphics.setColor(self.r, self.g, self.b, a)
@@ -16,3 +18,5 @@ end
 function Color:__tostring()
 	return ("Color(%d, %d, %d%s)"):format(self.r, self.g, self.b, self.a and ", "..self.a or "")
 end
+
+return Color

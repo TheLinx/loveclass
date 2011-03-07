@@ -1,15 +1,16 @@
-SoundEffect = class "SoundEffect"
--- This is a loveclass exclusive object. It implements soundmanager functionality.
+Class = require 'hump.class'
+Timer = require 'hump.timer'
 
 local queue = {}
 
-function SoundEffect:initialize(...)
+-- This is a loveclass exclusive object. It implements soundmanager functionality.
+local SoundEffect = Class(function(...)
 	self.object = love.sound.newSoundData(...)
 	self.looping = false
 	self.pitch = 1
 	self.volume = 1
 	self.playing = 0
-end
+end)
 
 function SoundEffect:play()
 	local src = love.audio.newSource(self.object, "static")
@@ -31,7 +32,7 @@ function SoundEffect:setVolume(volume)
 	self.volume = volume
 end
 
-addUpdateFunc(function ()
+Timer.addPeriodic(1, function ()
 	local removelist = {}
 	for i,v in ipairs(queue) do
 		if v:isStopped() then
@@ -42,3 +43,5 @@ addUpdateFunc(function ()
 		table.remove(queue, key)
 	end)
 end)
+
+return SoundEffect

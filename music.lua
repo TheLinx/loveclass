@@ -1,11 +1,11 @@
-Music = class("Music"):include(Indexable)
+Class = require 'hump.class'
 
 local loveNewSource = love.audio.newSource
 local nowplaying
 
-function Music:initialize(...)
+local Music = Class(function(...)
 	self.object = loveNewSource(...)
-end
+end)
 
 function Music:play()
 	if nowplaying then
@@ -22,7 +22,7 @@ function Music.stop()
 	nowplaying = nil
 end
 
-function Music:index(name)
+function Music:__index(name)
   if not self.object then return nil end
   local func = self.object[name]
   if func then
@@ -31,3 +31,5 @@ function Music:index(name)
     end
   end
 end
+
+return Music

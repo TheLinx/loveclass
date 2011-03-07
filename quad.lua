@@ -1,13 +1,13 @@
-Quad = class("Quad"):include(Indexable)
--- A quadrilateral with texture coordinate information.
+Class = require 'hump.class'
 
 local loveNewQuad = love.graphics.newQuad
 
+-- A quadrilateral with texture coordinate information.
 function Quad:initialize(...)
 	self.object = loveNewQuad(...)
 end
 
-function Quad:index(name)
+function Quad:__index(name)
   if not self.object then return nil end
   local func = self.object[name]
   if func then
@@ -16,3 +16,5 @@ function Quad:index(name)
     end
   end
 end
+
+return Quad

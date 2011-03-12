@@ -4,7 +4,7 @@ local loveNewImage = love.graphics.newImage
 local loveDrawq = love.graphics.drawq
 
 -- Drawable image type.
-local Image = Class(function(...)
+local Image = Class(function(self, ...)
 	Drawable.construct(self, loveNewImage(...))
 end)
 Image:inherit(Drawable)

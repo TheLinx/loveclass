@@ -1,7 +1,7 @@
 local loveNewQuad = love.graphics.newQuad
 
 -- A quadrilateral with texture coordinate information.
-function Quad:initialize(...)
+function Quad:initialize(self, ...)
 	self.object = loveNewQuad(...)
 end
 

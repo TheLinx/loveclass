@@ -1,7 +1,7 @@
 local loveDraw = love.graphics.draw
 
 -- Superclass for all things that can be drawn on screen. This is an abstract type that can't be created directly.
-local Drawable = Class(function(object)
+local Drawable = Class(function(self, object)
 	self.object = object
 end)
 

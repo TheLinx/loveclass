@@ -1,5 +1,3 @@
-Class = require 'hump.class'
-
 local loveSetFont = love.graphics.setFont
 local loveGetFont = love.graphics.getFont
 local lovePrint = love.graphics.print

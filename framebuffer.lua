@@ -1,5 +1,4 @@
-Class = require 'hump.class'
-Drawable = require 'loveclass.drawable'
+Drawable = require(({...})[1]:gsub("framebuffer$", "drawable"))
 
 local loveNewFramebuffer = love.graphics.newFramebuffer
 

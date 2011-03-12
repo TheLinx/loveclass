@@ -1,5 +1,4 @@
-Class = require 'hump.class'
-Drawable = require 'loveclass.drawable'
+Drawable = require(({...})[1]:gsub("particlesystem$", "drawable"))
 
 local loveNewParticleSystem = love.graphics.newParticleSystem
 

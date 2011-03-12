@@ -1,5 +1,4 @@
-Class = require 'hump.class'
-SuperFont = require 'loveclass.superfont'
+SuperFont = require(({...})[1]:gsub("font$", "superfont"))
 
 local loveNewFont = love.graphics.newFont
 

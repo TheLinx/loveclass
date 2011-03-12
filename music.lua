@@ -1,5 +1,3 @@
-Class = require 'hump.class'
-
 local loveNewSource = love.audio.newSource
 local nowplaying
 

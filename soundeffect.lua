@@ -1,6 +1,3 @@
-Class = require 'hump.class'
-Timer = require 'hump.timer'
-
 local queue = {}
 
 -- This is a loveclass exclusive object. It implements soundmanager functionality.

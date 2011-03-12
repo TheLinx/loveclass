@@ -1,5 +1,3 @@
-Class = require 'hump.class'
-
 local loveNewQuad = love.graphics.newQuad
 
 -- A quadrilateral with texture coordinate information.

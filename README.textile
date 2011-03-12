@@ -11,7 +11,6 @@ h1. Documentation
 There is no documentation at the moment.
 
 h1. Features
-  * Circle class with collision detection.
   * Color class for easy re-use of colours.
   * SoundEffect class with built-in source management.
   * Wraps most LÖVE objects:

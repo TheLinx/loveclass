@@ -10,7 +10,9 @@ function Drawable:draw(...)
 	loveDraw(self.object, ...)
 end
 
+local old = Drawable.__index
 function Drawable:__index(name)
+	if old[name] then return old[name] end
 	if not self.object then return nil end
 	local func = self.object[name]
 	if func then

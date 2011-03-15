@@ -1,12 +1,10 @@
-Class = require 'hump.class'
-
 local loveSetFont = love.graphics.setFont
 local loveGetFont = love.graphics.getFont
 local lovePrint = love.graphics.print
 local lovePrintf = love.graphics.printf
 
 -- You shouldn't use this class.
-local SuperFont = Class(function(object)
+local SuperFont = Class(function(self, object)
 	self.object = object
 end)
 

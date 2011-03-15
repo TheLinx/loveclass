@@ -4,7 +4,7 @@ A Lua library that wraps LÖVE objects into classes.
 
 h1. Dependencies
 
-LÖVE-class depends on "vrld's HUMP":http://github.com/vrld/hump library.
+LÖVE-class depends on "vrld's HUMP":http://github.com/vrld/hump library. You need to have Class and Timer in _G before you require these classes.
 
 h1. Documentation
 

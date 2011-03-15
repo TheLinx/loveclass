@@ -1,7 +1,5 @@
-Class = require 'hump.class'
-
 -- A colour.
-local Color = Class(function(r, g, b, a)
+local Color = Class(function(self, r, g, b, a)
 	self.r = r
 	self.g = g
 	self.b = b

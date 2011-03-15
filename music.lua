@@ -1,9 +1,7 @@
-Class = require 'hump.class'
-
 local loveNewSource = love.audio.newSource
 local nowplaying
 
-local Music = Class(function(...)
+local Music = Class(function(self, ...)
 	self.object = loveNewSource(...)
 end)
 
